@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">LOGO</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" alt="bg-stars" id="stars">
+        <img src="img/moon.png" alt="bg-moon" id="moon">
+        <img src="img/mountains_behind.png" alt="bg-mountainsBehind" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="img/mountains_front.png" alt="bg-mountainsFront" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis qui, velit quas doloremque fugit voluptate sit iure! Magnam fugit explicabo labore nesciunt! Fugiat corrupti repudiandae sunt veniam sequi odio laboriosam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae nesciunt quibusdam est omnis illo quas cum, asperiores consectetur dicta ipsa quasi libero veniam veritatis explicabo, itaque nam numquam. Accusantium, quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nam sint velit impedit! Sapiente aliquam consequatur illo at quas sunt provident molestias sed placeat quis. Illo porro cupiditate facere, consequuntur quae quos corporis earum possimus tempora, aliquid cum impedit omnis debitis consequatur unde quia explicabo perferendis. Rerum mollitia autem maxime a sapiente quia necessitatibus labore, quos blanditiis delectus provident minima consectetur nulla laborum quod quas, aliquam eius, neque impedit ut soluta. Error laborum illo ea obcaecati, quis nemo necessitatibus repellendus cumque ipsa et dolore blanditiis consequuntur praesentium dicta ipsam! Culpa itaque quos veniam iusto odio repudiandae tempora beatae cupiditate excepturi. <br><br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, velit nesciunt cumque odio quas ad dolore minus deleniti, dolorum tempora, dolor voluptate consectetur. Fugiat nobis cupiditate officiis excepturi soluta. Iste, recusandae tempora deleniti, deserunt mollitia earum adipisci commodi beatae, voluptas accusamus quasi doloremque! Iste, officiis! Tempora, magni, expedita recusandae iusto delectus commodi praesentium dicta voluptatum architecto nihil ipsum quidem ducimus quasi ad eveniet corporis sit aut eos soluta nesciunt quibusdam pariatur alias. Veritatis odit dolorum, nihil consequatur reiciendis repudiandae iure adipisci aliquid autem minus dolore nostrum cum quasi porro ex facere possimus qui dignissimos hic cumque non modi voluptas ab? Autem hic officia quibusdam nemo nulla, suscipit sunt perspiciatis alias voluptates, facere molestiae ratione quo, quae esse voluptas! Ratione officia fugit modi veniam consectetur, nulla molestiae reprehenderit placeat, necessitatibus numquam assumenda enim. Veritatis laudantium consequatur rem molestias ut delectus magni exercitationem ex est, distinctio eveniet tempore aperiam consequuntur blanditiis quia hic quam iure ullam pariatur! Officia aperiam est omnis et totam itaque repellat quis facere, unde dolore eos reiciendis. Quaerat, numquam ex voluptatum perspiciatis molestiae quae mollitia alias error adipisci consequuntur, ullam accusamus laborum molestias sapiente, aperiam sit atque? Quisquam maxime voluptate necessitatibus repellat sapiente, nostrum nam cupiditate rerum odit. <br><br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere voluptatum unde quam. Nesciunt, quia eos labore blanditiis consequuntur, quos praesentium perferendis repellat similique beatae aliquid alias omnis aperiam. Laboriosam id porro, nisi suscipit laudantium possimus corrupti, voluptate voluptatem perspiciatis aspernatur obcaecati. Laborum ab fugiat eum! Facilis officia maxime laboriosam doloremque fugiat neque voluptate aperiam? Velit consectetur ab aliquid error repudiandae dicta sequi ea adipisci! Ex odio repellendus quos hic a, vel facilis quis distinctio eum illum incidunt fuga aliquam autem! Voluptatum voluptate enim sunt error molestiae nisi et, earum minus sequi. Quia cupiditate natus et corrupti autem, mollitia voluptate nisi?</p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 1.05 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
